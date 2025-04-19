@@ -12,9 +12,228 @@
             --accent-color: #E7293D;
             --background-gradient: linear-gradient(135deg, #1A4D80 0%, #4A8FBF 100%);
         }
-
         body {
             font-family: 'Poppins', sans-serif;
             line-height: 1.8;
             max-width: 800px;
             margin: 40px auto;
+            padding: 0;
+            background: 
+                linear-gradient(45deg, rgba(250,250,250,0.95) 0%, rgba(245,245,245,0.95) 100%),
+                url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" opacity="0.03"><path fill="%231A4D80" d="M49,-42.5C59.8,-29.4,63.1,-9.5,58.7,8.6C54.3,26.6,42.2,42.8,25.3,53.7C8.5,64.6,-13.1,70.3,-30.7,63.7C-48.3,57.1,-61.9,38.3,-65.5,17.9C-69.1,-2.5,-62.7,-24.4,-49.9,-38.3C-37.1,-52.1,-17.5,-57.9,1.8,-59.3C21.1,-60.6,42.2,-57.5,49,-42.5Z"/></svg>');
+            color: var(--primary-color);
+        }
+
+        .container {
+            background: white;
+            padding: 0 40px 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+            transform: translateZ(0);
+        }
+
+        .header-section {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 40px 30px 60px;
+            background: var(--background-gradient);
+            color: white;
+            position: relative;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        }
+
+        .profile-pic {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            margin: 0 auto 20px;
+            transition: transform 0.3s;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 25px;
+            font-size: 0.9em;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+        }
+
+        .section-title {
+            position: relative;
+            padding: 15px 25px;
+            margin: 40px -25px 25px;
+            background: rgba(255,159,41,0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-left: 5px solid var(--secondary-color);
+        }
+
+        .emoji-title {
+            background: var(--secondary-color);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4em;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: 600;
+            position: relative;
+        }
+
+        .signature {
+            margin-top: 40px;
+            padding: 30px;
+            background: rgba(26,77,128,0.05);
+            border-radius: 10px;
+            text-align: center;
+            position: relative;
+            border: 2px dashed var(--primary-color);
+        }
+
+        .signature::before {
+            content: "✍️";
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.8em;
+            background: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        p {
+            margin-bottom: 1.2em;
+            text-align: justify;
+            position: relative;
+            z-index: 1;
+        }
+
+        .floating-icon {
+            position: absolute;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 15px;
+                padding: 0 20px 20px;
+            }
+
+            .header-section {
+                padding: 25px 20px 50px;
+            }
+
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Icônes flottantes décoratives -->
+        <i class="floating-icon" style="top:15%; left:-2%; font-size:120px;">🩺</i>
+        <i class="floating-icon" style="top:800px; right:-40px; font-size:100px;">👥</i>
+        <i class="floating-icon" style="top:1200px; left:-50px; font-size:120px;">🎖️</i>        
+        <i class="floating-icon" style="top:19.8%; left:3.4%; font-size:70.4px;">🩺</i>    
+        <i class="floating-icon" style="top:44.7%; left:85.7%; font-size:40px;">🎖️</i>       
+        <i class="floating-icon" style="top:22.4%; left:33%; font-size:118.6px;">👥</i>     
+        <i class="floating-icon" style="top:78.8%; left:55%; font-size:81.3px;">💟</i>   
+        <i class="floating-icon" style="top:62.1%; left:17.9%; font-size:118.5px;">🤝</i>   
+        <i class="floating-icon" style="top:56.6%; left:33.7%; font-size:115.4px;">🧑‍🎓</i>     
+        <i class="floating-icon" style="top:34.6%; left:25.4%; font-size:112px;">🌟</i> 
+        <i class="floating-icon" style="top:57.2%; left:65.5%; font-size:108.7px;">✨</i>   
+        <i class="floating-icon" style="top:26.3%; left:87.6%; font-size:100.9px;">🌠</i>    
+        <i class="floating-icon" style="top:72.4%; left:54.9%; font-size:41.6px;">🚑</i>    
+        <i class="floating-icon" style="top:74.2%; left:35.4%; font-size:82.4px;">🥋</i>     
+        <i class="floating-icon" style="top:35.8%; left:82.7%; font-size:90.3px;">🥊</i>  
+        <i class="floating-icon" style="top:15.4%; left:98.4%; font-size:40.1px;">🪄</i>        
+        <i class="floating-icon" style="top:28%; left:99.6%; font-size:48.3px;">⛑️</i>     
+        <i class="floating-icon" style="top:23.3%; left:96.1%; font-size:98px;">🪖</i>         
+        <i class="floating-icon" style="top:60.1%; left:84%; font-size:89px;">🇨🇵</i>
+        <i class="floating-icon" style="top:73%; left:56.8%; font-size:86.5px;">🇺🇲</i>         
+        <i class="floating-icon" style="top:63.3%; left:20.5%; font-size:74.3px;">🇪🇦</i>   
+        <i class="floating-icon" style="top:51.3%; left:95.2%; font-size:39.8px;">🇷🇺</i>
+
+        <div class="header-section">
+            <img src="https://github.com/Lost-Cyrano/stockage-link/blob/main/BebePompier.jpeg?raw=true" 
+                 class="profile-pic" 
+                 alt="Photo Anael Maire">
+            <h1>MAIRE Anael</h1>
+            <div class="contact-info">
+                <div class="contact-item">📧 anaelmaire@gmail.com</div>
+                <div class="contact-item">📱 07 81 45 08 56</div>
+                <div class="contact-item">🏠 16 Rue de la Robeyere<br>05200 Embrun</div>
+                <div class="contact-item">👤 Tél. responsable :<br> 06 18 91 65 44</div>
+            </div>
+        </div>
+
+        <p>Madame, Monsieur,</p>
+
+        <p>Actuellement inscrit au stage BAFA 1 du samedi 5 avril au samedi 12 avril, je souhaite mettre à profit mes compétences et mon dynamisme en rejoignant votre équipe d’animation aux Centres de Loisirs de Chadenas. Passionné par l’animation et particulièrement attiré par le domaine du secours, je suis motivé à apporter mon savoir-faire ainsi qu’un réel esprit d’équipe au service de vos activités.</p>
+
+        <div class="section-title">
+            <span class="emoji-title">🩺</span>
+            <h2>Compétences en secourisme</h2>
+        </div>
+        <p>En tant que secouriste PSE à la Croix Rouge ; formé aux PSC1, AFGSU niveau 2, EPALS (Européan Pediatric Advanced Life Support), formation "glycémie" de la CRF, ainsi que de multiples qualifications opérationnelles telles que celle d’opérateur radio ; j’ai acquis une solide expérience dans le domaine de la sécurité, des premiers secours avec cette spécialisation de mon quotidien, me demandant d'être proactif et d'avoir une résistance à la pression... Mon intérêt pour les secours m’a naturellement conduit à envisager la formation en Surveillant de Baignade, qui viendra compléter mon profil d'urgentiste, il me semble, déjà bien diversifié.</p>
+
+        <div class="section-title">
+            <span class="emoji-title">🥋</span>
+            <h2>Engagements sportifs</h2>
+        </div>
+        <p>Parallèlement à mes engagements de secouriste, je pratique le Kung Fu Wushu en compétition au niveau national avec le club de Kung Fu Wushu Embrunais. Mais je participe aussi activement aux cours et aux activités sportives proposées par l'option sport du lycée et par l’association de l’UNSS, notamment en boxe française, escalade et musculation ; qui me permettent de développer discipline, rigueur, un esprit d'équipe et de réussite.</p>
+
+        <div class="section-title">
+            <span class="emoji-title">👥</span>
+            <h2>Vie associative</h2>
+        </div>
+        <p>Également très impliqué dans la vie associative de mon établissement – en tant que secrétaire général auprès et du Conseil de Vie Lycéen du lycée Honoré-Romane, me permettant la gestion de l'ensemble des présidences et des secrétariats des institutions lycéennes ; et en tant que vice-président de l'association de la Maison des Lycéens –, j’ai appris à organiser, communiquer et gérer des projets, des groupes de travail et des débats.</p>
+
+        <div class="section-title">
+            <span class="emoji-title">🎖️</span>
+            <h2>Expérience paramilitaire</h2>
+        </div>
+        <p>Mon engagement s’est aussi enrichi à travers une participation à une association de roleplay militaire sous le commandement d'officiers de l'armée de l'air, de l'espace, des services de renseignement et de l'armée Terre ; où j’ai suivi des formations telles que celle de JTAC* qui apprend à avoir une bonne capacité d'analyse de son environnement, de savoir lire des cartes complexes, de communiquer des coordonnées et de savoir communiquer efficacement même sous pressions ; renforçant mes capacités en communication et en gestion de situations d’urgence ; tout en valorisant des qualités telles que la ponctualité, le sens des responsabilités et du respect ; mais aussi le sens du roleplay et du jeu de rôle grandeur nature.</p>
+        <p><em>*JTAC : Les Joint Terminal Attack Controller (JTAC) sont un atout en cas de soutien aérien. Au sol, ils sont les yeux des pilotes et coordonnent directement avec eux les frappes aériennes et le soutien aéroporté. Ils sont "autonome" dans l'emploi de l'arme aérienne, sous l'approbation de l'officier en charge du dispositif. Cette spécialité requiert une bonne capacité d'analyse de son environnement et de savoir communiquer efficacement</em></p>
+
+        <div class="section-title">
+            <span class="emoji-title">💼</span>
+            <h2>Disponibilité</h2>
+        </div>
+        <p>Disponible durant le mois de juillet, je suis prêt à m’investir pleinement dans vos projets et à contribuer à la réussite des animations proposées afin de mener au mieux la réussite des exigences de ce stage ; tout en restant humble et ouvert aux apprentissages.</p>
+
+        <div class="signature">
+            <p>Je reste à votre disposition pour toute information complémentaire.<br>
+            Dans l’attente de votre réponse, je vous prie d’agréer, Madame, Monsieur, l’expression de mes salutations distinguées.</p>
+            <p><strong>MAIRE Anael</strong></p>
+        </div>
+    </div>
+</body>
+</html>

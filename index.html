@@ -135,8 +135,21 @@
 
         .floating-icon {
             position: absolute;
-            opacity: 0.1;
+            opacity: 0;
             z-index: 0;
+            font-size: 10vw;
+        }
+
+        .small-text {
+            font-size: 0.8em;
+            color: #666;
+            margin-top: -1em;
+            margin-bottom: 1.5em;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
 
         @media (max-width: 600px) {
@@ -152,39 +165,37 @@
             .contact-info {
                 grid-template-columns: 1fr;
             }
+            
+            .floating-icon {
+                display: none;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Icônes flottantes décoratives -->
-        <i class="floating-icon" style="top:15%; left:-2%; font-size:120px;">🩺</i>
-        <i class="floating-icon" style="top:800px; right:-40px; font-size:100px;">👥</i>
-        <i class="floating-icon" style="top:1200px; left:-50px; font-size:120px;">🎖️</i>        
-        <i class="floating-icon" style="top:19.8%; left:3.4%; font-size:70.4px;">🩺</i>    
-        <i class="floating-icon" style="top:44.7%; left:85.7%; font-size:40px;">🎖️</i>       
-        <i class="floating-icon" style="top:22.4%; left:33%; font-size:118.6px;">👥</i>     
-        <i class="floating-icon" style="top:78.8%; left:55%; font-size:81.3px;">💟</i>   
-        <i class="floating-icon" style="top:62.1%; left:17.9%; font-size:118.5px;">🤝</i>   
-        <i class="floating-icon" style="top:56.6%; left:33.7%; font-size:115.4px;">🧑‍🎓</i>     
-        <i class="floating-icon" style="top:34.6%; left:25.4%; font-size:112px;">🌟</i> 
-        <i class="floating-icon" style="top:57.2%; left:65.5%; font-size:108.7px;">✨</i>   
-        <i class="floating-icon" style="top:26.3%; left:87.6%; font-size:100.9px;">🌠</i>    
-        <i class="floating-icon" style="top:72.4%; left:54.9%; font-size:41.6px;">🚑</i>    
-        <i class="floating-icon" style="top:74.2%; left:35.4%; font-size:82.4px;">🥋</i>     
-        <i class="floating-icon" style="top:35.8%; left:82.7%; font-size:90.3px;">🥊</i>  
-        <i class="floating-icon" style="top:15.4%; left:98.4%; font-size:40.1px;">🪄</i>        
-        <i class="floating-icon" style="top:28%; left:99.6%; font-size:48.3px;">⛑️</i>     
-        <i class="floating-icon" style="top:23.3%; left:96.1%; font-size:98px;">🪖</i>         
-        <i class="floating-icon" style="top:60.1%; left:84%; font-size:89px;">🇨🇵</i>
-        <i class="floating-icon" style="top:73%; left:56.8%; font-size:86.5px;">🇺🇲</i>         
-        <i class="floating-icon" style="top:63.3%; left:20.5%; font-size:74.3px;">🇪🇦</i>   
-        <i class="floating-icon" style="top:51.3%; left:95.2%; font-size:39.8px;">🇷🇺</i>
+        <!-- Icônes flottantes décoratives - version discrète et harmonieuse -->
+        <i class="floating-icon" style="top:10%; left:5%;">🩺</i>
+        <i class="floating-icon" style="top:15%; right:8%;">👥</i>
+        <i class="floating-icon" style="top:30%; left:10%;">🎖️</i>        
+        <i class="floating-icon" style="top:40%; right:15%;">💟</i>   
+        <i class="floating-icon" style="top:50%; left:12%;">🤝</i>   
+        <i class="floating-icon" style="top:60%; right:10%;">🧑‍🎓</i>     
+        <i class="floating-icon" style="top:70%; left:15%;">🌟</i> 
+        <i class="floating-icon" style="top:80%; right:12%;">✨</i>   
+        <i class="floating-icon" style="top:90%; left:10%;">🌠</i>    
+        <i class="floating-icon" style="top:25%; right:5%;">🚑</i>    
+        <i class="floating-icon" style="top:35%; left:85%;">🥋</i>     
+        <i class="floating-icon" style="top:45%; right:85%;">🥊</i>  
+        <i class="floating-icon" style="top:55%; left:90%;">🪄</i>        
+        <i class="floating-icon" style="top:65%; right:90%;">⛑️</i>     
+        <i class="floating-icon" style="top:75%; left:85%;">🪖</i>         
+        <i class="floating-icon" style="top:85%; right:85%;">🇨🇵</i>
 
         <div class="header-section">
-            <img src="https://github.com/Lost-Cyrano/stockage-link/blob/main/BebePompier.jpeg?raw=true" 
+            <img src="https://github.com/Lost-Cyrano/stockage-link/blob/main/Lala14.jpeg?raw=true" 
                  class="profile-pic" 
-                 alt="Photo Anael Maire">
+                 alt="Photo is loading ...">
             <h1>MAIRE Anael</h1>
             <div class="contact-info">
                 <div class="contact-item">📧 anaelmaire@gmail.com</div>
@@ -196,42 +207,42 @@
 
         <p>Madame, Monsieur,</p>
 
-        <p>Actuellement inscrit au stage BAFA 1 du samedi 5 avril au samedi 12 avril, je souhaite mettre à profit mes compétences et mon dynamisme en rejoignant votre équipe d’animation aux Centres de Loisirs de Chadenas. Passionné par l’animation et particulièrement attiré par le domaine du secours, je suis motivé à apporter mon savoir-faire ainsi qu’un réel esprit d’équipe au service de vos activités.</p>
+        <p>Ayant récemment terminé mon BAFA 1 avec l'Aroeven - une expérience que je considère comme l'une des meilleures semaines de ma vie - j'ai obtenu la mention "Très bien", à un défaut près de "l'excellence" que je compte bien atteindre lors de mon BAFA 2. Je souhaite aujourd'hui mettre à profit mes compétences et mon dynamisme en rejoignant votre équipe d'animation. Passionné par l'animation et particulièrement attiré par le domaine du secours, je suis motivé à apporter mon savoir-faire ainsi qu'un réel esprit d'équipe au service de vos activités.</p>
 
         <div class="section-title">
             <span class="emoji-title">🩺</span>
             <h2>Compétences en secourisme</h2>
         </div>
-        <p>En tant que secouriste PSE à la Croix Rouge ; formé aux PSC1, AFGSU niveau 2, EPALS (Européan Pediatric Advanced Life Support), formation "glycémie" de la CRF, ainsi que de multiples qualifications opérationnelles telles que celle d’opérateur radio ; j’ai acquis une solide expérience dans le domaine de la sécurité, des premiers secours avec cette spécialisation de mon quotidien, me demandant d'être proactif et d'avoir une résistance à la pression... Mon intérêt pour les secours m’a naturellement conduit à envisager la formation en Surveillant de Baignade, qui viendra compléter mon profil d'urgentiste, il me semble, déjà bien diversifié.</p>
+        <p>En tant que secouriste PSE à la Croix Rouge ; formé aux PSC1 (dont je participe activement aux formations en tant que formateur pour des groupes et notament des élèves de 3e du lycée Saint-Jo), AFGSU niveau 2, EPALS (Européan Pediatric Advanced Life Support), formation "glycémie" de la CRF, ainsi que de multiples qualifications opérationnelles telles que celle d'opérateur radio ; j'ai acquis une solide expérience dans le domaine de la sécurité et des premiers secours. Mon intérêt pour les secours m'a naturellement conduit à m'inscrire à la formation de Surveillant de Baignade (BAFA 3) que je passerai du 18 au 25 octobre, qui viendra compléter mon profil d'urgentiste, il me semble, déjà bien diversifié.</p>
 
         <div class="section-title">
             <span class="emoji-title">🥋</span>
             <h2>Engagements sportifs</h2>
         </div>
-        <p>Parallèlement à mes engagements de secouriste, je pratique le Kung Fu Wushu en compétition au niveau national avec le club de Kung Fu Wushu Embrunais. Mais je participe aussi activement aux cours et aux activités sportives proposées par l'option sport du lycée et par l’association de l’UNSS, notamment en boxe française, escalade et musculation ; qui me permettent de développer discipline, rigueur, un esprit d'équipe et de réussite.</p>
+        <p>Parallèlement à mes engagements de secouriste, je pratique le Kung Fu Wushu en compétition au niveau national avec le club de Kung Fu Wushu Embrunais. Mais je participe aussi activement aux cours et aux activités sportives proposées par l'option sport du lycée et par l'association de l'UNSS, notamment en boxe française, escalade et musculation ; qui me permettent de développer discipline, rigueur, un esprit d'équipe et de réussite.</p>
 
         <div class="section-title">
             <span class="emoji-title">👥</span>
             <h2>Vie associative</h2>
         </div>
-        <p>Également très impliqué dans la vie associative de mon établissement – en tant que secrétaire général auprès et du Conseil de Vie Lycéen du lycée Honoré-Romane, me permettant la gestion de l'ensemble des présidences et des secrétariats des institutions lycéennes ; et en tant que vice-président de l'association de la Maison des Lycéens –, j’ai appris à organiser, communiquer et gérer des projets, des groupes de travail et des débats.</p>
+        <p>Également très impliqué dans la vie associative de mon établissement – en tant que secrétaire général, siégeant aux consseille de Vie Lycéen du lycée Honoré-Romane, me permettant la gestion de l'ensemble des présidences et des secrétariats des institutions lycéennes ; et en tant que vice-président de l'association de la Maison des Lycéens –, j'ai appris à organiser, communiquer et gérer des projets, des groupes de travail et des débats.</p>
 
         <div class="section-title">
             <span class="emoji-title">🎖️</span>
             <h2>Expérience paramilitaire</h2>
         </div>
-        <p>Mon engagement s’est aussi enrichi à travers une participation à une association de roleplay militaire sous le commandement d'officiers de l'armée de l'air, de l'espace, des services de renseignement et de l'armée Terre ; où j’ai suivi des formations telles que celle de JTAC* qui apprend à avoir une bonne capacité d'analyse de son environnement, de savoir lire des cartes complexes, de communiquer des coordonnées et de savoir communiquer efficacement même sous pressions ; renforçant mes capacités en communication et en gestion de situations d’urgence ; tout en valorisant des qualités telles que la ponctualité, le sens des responsabilités et du respect ; mais aussi le sens du roleplay et du jeu de rôle grandeur nature.</p>
-        <p><em>*JTAC : Les Joint Terminal Attack Controller (JTAC) sont un atout en cas de soutien aérien. Au sol, ils sont les yeux des pilotes et coordonnent directement avec eux les frappes aériennes et le soutien aéroporté. Ils sont "autonome" dans l'emploi de l'arme aérienne, sous l'approbation de l'officier en charge du dispositif. Cette spécialité requiert une bonne capacité d'analyse de son environnement et de savoir communiquer efficacement</em></p>
+        <p>Mon engagement s'est aussi enrichi à travers une participation à une association de roleplay militaire sous le commandement d'officiers de l'armée de l'air, de l'espace, des services de renseignement et de l'armée Terre. En tant qu'Adjudant (sous-officier), je suis en charge de groupes allant jusqu'à 15 opérateurs (composés de 2 à 3 équipes). Cet engagement m'a permis de suivre des formations telles que celle de JTAC*, renforçant mes capacités en communication et en gestion de situations d'urgence, tout en valorisant des qualités telles que la ponctualité, le sens des responsabilités, du respect et du leadership.</p>
+        <p class="small-text"><em>*JTAC : Les Joint Terminal Attack Controller (JTAC) sont un atout en cas de soutien aérien. Au sol, ils sont les yeux des pilotes et coordonnent directement avec eux les frappes aériennes et le soutien aéroporté. Ils sont "autonome" dans l'emploi de l'arme aérienne, sous l'approbation de l'officier en charge du dispositif. Cette spécialité requiert une bonne capacité d'analyse de son environnement et de savoir communiquer efficacement</em></p>
 
         <div class="section-title">
             <span class="emoji-title">💼</span>
             <h2>Disponibilité</h2>
         </div>
-        <p>Disponible durant le mois de juillet, je suis prêt à m’investir pleinement dans vos projets et à contribuer à la réussite des animations proposées afin de mener au mieux la réussite des exigences de ce stage ; tout en restant humble et ouvert aux apprentissages.</p>
+        <p>Disponible durant tout le mois de juillet, je suis prêt à m'investir pleinement dans votre structure, que ce soit pour effectuer mon stage pratique ou pour continuer à travailler avec votre équipe tout au long du mois. Cette période d'immersion me permettra de concrétiser mes apprentissages tout en contribuant activement à vos projets d'animation.</p>
 
         <div class="signature">
             <p>Je reste à votre disposition pour toute information complémentaire.<br>
-            Dans l’attente de votre réponse, je vous prie d’agréer, Madame, Monsieur, l’expression de mes salutations distinguées.</p>
+            Dans l'attente de votre réponse, je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.</p>
             <p><strong>MAIRE Anael</strong></p>
         </div>
     </div>
